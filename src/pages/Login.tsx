@@ -1,0 +1,1 @@
+export default function Name() { return <div>Name Page</div> }

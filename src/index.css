@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: white;
+  --color-foreground: #0f172a;
+}
+
+/* This allows Tailwind to recognize the .dark class on the html tag */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    /* Default Light Mode Styles */
+    @apply bg-white text-slate-950 transition-colors duration-300;
+  }
+
+  /* Styles applied when the 'dark' class is present */
+  .dark body {
+    @apply bg-slate-950 text-white;
+  }
+}
